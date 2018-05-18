@@ -1,4 +1,26 @@
 <h1>Drag-Drop App By Alok Rawat</h1>
 
-<div class="box">My Control</div>
-<div class="box">My Control</div>
+<h3>Draggable Directive</h3>
+<div class="box" appDraggable
+(dragStart)="onDragStart()" (dragMove)="onDragMove($event)" (dragEnd) = "onDragEnd()">
+  My Control
+</div>
+<div class="box" appDraggableRx
+(dragStart)="onDragStart()" (dragMove)="onDragMove($event)" (dragEnd) = "onDragEnd()">
+  My Control2-Rx
+</div>
+
+<div class="box">My Control3</div>
+
+<h3 appMovable>Movable Directive</h3>
+<div class="box" appMovable>
+  <div class="box" appMovable>
+    Movable Control1
+  </div>
+
+  <div class="box" appMovable [appMovableReset]="true">
+      Movable Control2
+  </div>
+</div>
+
+<!-- (dragMove)="onDragMove($event)" (dragEnd) = "onDragEnd()" -->
