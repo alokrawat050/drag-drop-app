@@ -1,6 +1,6 @@
 <h1>Drag-Drop App By Alok Rawat</h1>
 
-<h3>Draggable Directive</h3>
+<h3>Part 1 - Draggable Directive</h3>
 <div class="box" appDraggable
 (dragStart)="onDragStart()" (dragMove)="onDragMove($event)" (dragEnd) = "onDragEnd()">
   My Control
@@ -12,7 +12,7 @@
 
 <div class="box">My Control3</div>
 
-<h3 appMovable>Movable Directive</h3>
+<h3 appMovable>Part 2 - Movable Directive</h3>
 <div class="box" appMovable>
   <div class="box" appMovable>
     Movable Control1
@@ -24,3 +24,14 @@
 </div>
 
 <!-- (dragMove)="onDragMove($event)" (dragEnd) = "onDragEnd()" -->
+
+
+<h2>Part 3 - Movable Area</h2>
+
+<div class="area" appMovableArea>
+  <div class="box" appMovable *ngFor="let trapped of trappedBoxes">
+    {{ trapped }}
+  </div>
+</div>
+
+<button (click)="add()">Add</button>

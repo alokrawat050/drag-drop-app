@@ -18,4 +18,10 @@ export class AppComponent {
   onDragEnd(): void {
     console.log('got drag end');
   }
+
+  trappedBoxes = ['Trapped 1', 'Trapped 2'];
+
+  add(): void {
+    this.trappedBoxes.push('New trapped');
+  }
 }
